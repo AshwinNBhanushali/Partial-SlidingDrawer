@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mysliding="http://schemas.android.com/apk/res/androgeek.ui.partialslidingdrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <androgeek.ui.partialslidingdrawer.SlidingDrawer
+        android:id="@+id/drawer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:background="#40808080"
+        android:visibility="visible"
+        mysliding:slide_content="@+id/content"
+        mysliding:slide_handle="@+id/handle" 
+        >
+
+        <RelativeLayout
+            android:id="@id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView
+                android:id="@+id/talk_list_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:drawingCacheQuality="auto" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/talk_strip" />
+    </androgeek.ui.partialslidingdrawer.SlidingDrawer>
+
+</RelativeLayout>
